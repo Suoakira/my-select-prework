@@ -4,7 +4,8 @@ def my_select(collection)
     while i < collection.size
     block_given?
     if yield(collection[i]) == true
-      new_collection.push(yield(collection[i]))
+      new_collection.push(collection[i])
+     end
     i += 1
   end
   new_collection
